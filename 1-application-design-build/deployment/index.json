@@ -1,0 +1,25 @@
+{
+    "title": "Choose and use the right workload: Deployment",
+    "description": "Deployment",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+      },
+      "steps": [
+        {
+          "title": "Create a deployment",
+          "text": "step1/step1.md"
+        },
+        {
+          "title": "Delete a pod",
+          "text": "step2.md"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
