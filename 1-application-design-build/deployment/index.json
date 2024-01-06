@@ -21,6 +21,6 @@
       }
     },
     "backend": {
-      "imageid": "deployment"
+      "imageid": "kubernetes-kubeadm-2nodes"
     }
   }

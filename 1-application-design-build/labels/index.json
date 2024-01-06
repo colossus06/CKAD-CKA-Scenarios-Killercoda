@@ -24,6 +24,6 @@
       }
     },
     "backend": {
-      "imageid": "labels"
+      "imageid": "kubernetes-kubeadm-2nodes"
     }
   }
