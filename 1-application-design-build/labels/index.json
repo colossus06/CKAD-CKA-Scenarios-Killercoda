@@ -1,0 +1,29 @@
+{
+    "title": "Practice labelling",
+    "description": "Labels",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+      },
+      "steps": [
+        {
+          "title": "Add a label to a pod",
+          "text": "step1.md"
+        },
+        {
+          "title": "Edit a label",
+          "text": "step2.md"
+        },
+        {
+          "title": "Annotate a pod",
+          "text": "step3.md"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "labels"
+    }
+  }
