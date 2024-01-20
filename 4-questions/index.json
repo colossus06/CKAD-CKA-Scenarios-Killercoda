@@ -1,0 +1,33 @@
+{
+    "title": "5 Excercises on Application Design and Buils",
+    "description": "Acing application Design and Build concepts",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+      },
+      "steps": [
+        {
+          "title": "Containerize a Python Application",
+          "text": "step1.md"
+        },
+        {
+          "title": "Create a cronjob",
+          "text": "step2.md"
+        },
+        {
+          "title": "Create a cronjob",
+          "text": "step3.md"
+        },
+        {
+          "title": "Create a multi-container pod desin",
+          "text": "step4.md"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
