@@ -1,0 +1,37 @@
+{
+    "title": "4 Excercises on Storage Domain for CKA",
+    "description": "Acing the storage",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+      },
+      "steps": [
+        {
+          "title": "StorageClass",
+          "text": "step1.md"
+        },
+        {
+          "title": "StatefulSet",
+          "text": "step2.md"
+        },
+        {
+          "title": "Persistent volume",
+          "text": "step3.md"
+        },
+        {
+          "title": "Access Mode",
+          "text": "step4.md"
+        },
+        {
+          "title": "Storage class",
+          "text": "step5.md"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
