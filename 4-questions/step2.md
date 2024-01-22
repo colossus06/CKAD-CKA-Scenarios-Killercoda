@@ -1,7 +1,17 @@
 # Create a cronjob
 
-Create a CronJob named "ping" from a manifest file on ckad/temp.cj.yaml, running only to one completion in the "blog" namespace. It should ping a [website](devtechops.dev) every minute with a busybox container, complete within 13 seconds.
-Validate the succesfull ping.
+Namespaces and folders aren't created, you need to create them when necessary.
+
+
+Create a manifest file for a CronJob named `ping` on `ckad/temp/cj.yaml` in the `blog` namespace.
+
+
+It should run only to one successful completion. 
+It should ping a [website](devtechops.dev) every minute with a busybox container and should complete within 13 seconds.
+Validate the successful ping.
+
+
+
 
 
 
