@@ -11,15 +11,15 @@
           "text": "step1.md"
         },
         {
-          "title": "Create a cronjob",
+          "title": "Cronjob",
           "text": "step2.md"
         },
         {
-          "title": "Create a cronjob",
+          "title": "Persistenting Volumes",
           "text": "step3.md"
         },
         {
-          "title": "Create a multi-container pod desin",
+          "title": "Multi-container pod design",
           "text": "step4.md"
         }
       ],

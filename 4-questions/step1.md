@@ -1,4 +1,4 @@
-## Containerize a Python Application
+# Containerize a Python Application
 
 Clone the [study group repo](https://github.com/colossus06/cka-ckad-study-group-2024.git), navigate to `study-sessions/week-2` folder. There is a Dockerfile. It runs a python image. do the following:
 - change the base image tag to `3.11.4`

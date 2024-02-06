@@ -1,4 +1,4 @@
-# Create a cronjob
+# Cronjob
 
 Namespaces and folders aren't created, you need to create them when necessary.
 
@@ -7,7 +7,7 @@ Create a manifest file named `ckad/temp/cj.yaml` for a CronJob `ping` in the `bl
 
 
 `ping` cj should run only to one successful completion. 
-when the cj runs it should ping a [website](devtechops.dev) every minute with a busybox:1.28 container that shoud only start only on failure and should complete within 13 seconds.
+when the cj runs it should ping a [website](kuberada.devtechops.dev) every minute with a busybox:1.28 container that shoud only start only on failure and should complete within 13 seconds.
 Validate the successful ping.
 
 

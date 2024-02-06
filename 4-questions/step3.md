@@ -1,4 +1,4 @@
-# Create a persistent volume
+# Persistenting Volumes
 
 Create a hostPath PersistentVolume named `sg-pv`, allocate `1Gi`, with access mode `ReadWriteOnce`. Volume should be in the `/mnt/shared` directory. Specify a storage class name `sg-rocking`.
 
@@ -18,6 +18,12 @@ Recreate the pod and verify that you can see the `test.txt` file.
 <details>
 <summary>Solution </summary>
 
+## Create the PV
+
+```sh
+vim sg-pv.yaml
+```
+
 ```sh
 apiVersion: v1
 kind: PersistentVolume
@@ -34,5 +40,76 @@ spec:
     path: /mnt/shared
 ```
 
+
+```sh
+k apply -f sg-pv.yaml
+```
+
+## Create the PVC
+
+```sh
+vim i-need.yaml
+```
+
+```sh
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: i-need
+spec:
+ accessModes:
+ - ReadWriteOnce
+ resources:
+  requests:
+  storage: 256Mi
+ storageClassName: sg-rocking
+```
+
+```sh
+kubectl apply -f i-need.yaml
+```
+
+## Create the pod
+
+```sh
+k run user --image=nginx -l=app=frontend --dry-run=client --restart=Never -oyaml > user.yaml
+```
+
+```sh
+apiVersion: v1
+kind: Pod
+metadata:
+ name: user
+ labels:
+ app: frontend
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+    volumeMounts:
+    - name: user-volume
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: user-volume
+    persistentVolumeClaim:
+      claimName: i-need
+```
+
+```sh
+k apply -f user-pod.yaml
+```
+## Get a shell into the container
+
+```sh
+k exec -it user -- touch /usr/share/nginx/html/test.txt
+```
+
+## Recreate the pod an display the file
+
+```sh
+k delete -f user.yaml
+k apply -f user.yaml
+k exec user -- sh -c "cd /usr/share/nginx/;ls -la"
+```
 
 </details>
